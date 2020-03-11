@@ -1,0 +1,49 @@
+.skin-purple {
+  .skin-border-color {
+    border-color: @purple !important;
+  }
+  .skin-background-color {
+    background-color: @purple;
+    &.lighten {
+      background-color: lighten(@purple, 30%);
+    }
+  }
+  .skin-button {
+    background: @purple;
+    &.lighten {
+      background: lighten(@purple, 30%);
+    }
+    &.bordered {
+      .skin-border-color();
+    }
+    &.focus {
+      border:0;
+    }
+  }
+  .skin-color {
+    color: @purple;
+  }
+  .skin-tooltip-top + .tooltip.top, .skin-tooltip-left + .tooltip.left, .skin-tooltip-right + .tooltip.right  {
+    .tooltip-inner {
+      background-color: @purple;
+      font-weight: bold;
+    }
+
+  }
+  .skin-tooltip-top + .tooltip.top {
+    .tooltip-arrow {
+      border-top-color: @purple;
+    }
+  }
+  .skin-tooltip-left + .tooltip.left {
+    .tooltip-arrow {
+      border-left-color: @purple;
+    }
+  }
+
+  .skin-tooltip-right + .tooltip.right {
+    .tooltip-arrow {
+      border-right-color: @purple;
+    }
+  }
+}

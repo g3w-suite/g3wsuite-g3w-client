@@ -1,0 +1,9 @@
+<ul id="g3w-search" class="treeview-menu g3w-search g3w-tools menu-items">
+  <li v-for="search in state.searches" class="menu-item" @click="showPanel(search)">
+    <i :class="g3wtemplate.getFontClass('empty-circle')"></i>
+    <span>{{ search.name }}</span>
+  </li>
+  <li v-for="searchtool in state.searchtools">
+    <g3w-tool :tool="searchtool"></g3w-tool>
+  </li>
+</ul>

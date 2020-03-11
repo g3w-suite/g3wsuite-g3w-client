@@ -1,0 +1,50 @@
+.skin-blue {
+  .skin-border-color {
+    border-color: @light-blue !important;
+  }
+  .skin-background-color {
+    background-color: @light-blue;
+    &.lighten {
+      background-color: lighten(@light-blue, 30%);
+    }
+  }
+  .skin-button {
+    background: @light-blue;
+    &.lighten {
+      background: lighten(@light-blue, 30%);
+    }
+    &.bordered {
+      .skin-border-color();
+    }
+    &.focus {
+      border:0;
+    }
+  }
+  .skin-color {
+    color: @light-blue;
+  }
+
+  .skin-tooltip-top + .tooltip.top, .skin-tooltip-left + .tooltip.left, .skin-tooltip-right + .tooltip.right  {
+    .tooltip-inner {
+      background-color:@light-blue;
+      font-weight: bold;
+    }
+
+  }
+  .skin-tooltip-top + .tooltip.top {
+    .tooltip-arrow {
+      border-top-color: @light-blue;
+    }
+  }
+  .skin-tooltip-left + .tooltip.left {
+    .tooltip-arrow {
+      border-left-color: @light-blue;
+    }
+  }
+
+  .skin-tooltip-right + .tooltip.right {
+    .tooltip-arrow {
+      border-right-color: @light-blue;
+    }
+  }
+}
