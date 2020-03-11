@@ -125,7 +125,7 @@ const ol = {
 };
 
 
-module.exports = {
+export default {
   core,
   gui,
   ol

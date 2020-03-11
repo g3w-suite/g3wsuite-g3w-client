@@ -1,3 +1,5 @@
+import api from 'api';
+const FormComponent = api.gui.vue.FormComponent;
 const t = require('core/i18n/i18n.service').t;
 const inherit = require('core/utils/utils').inherit;
 const base = require('core/utils/utils').base;
@@ -351,7 +353,7 @@ const ApplicationTemplate = function({ApplicationService}) {
       return showPanelContent;
     };
     GUI.showForm = function(options) {
-      const FormComponent = require('api').gui.vue.FormComponent;
+      const FormComponent = FormComponent;
       // new isnstace every time
       const formComponent = options.formComponent ? new options.formComponent(options) :  new FormComponent(options);
       //get service

@@ -1,9 +1,10 @@
 import userMessage from 'gui/components/usermessage/usermessage.vue';
-const inherit = require('api').core.utils.inherit;
-const t = require('api').core.i18n.t;
-const base = require('api').core.utils.base;
-const G3WObject = require('api').core.G3WObject;
-const GUI = require('api').gui.GUI;
+import api from 'api'
+const inherit = api.core.utils.inherit;
+const t = api.core.i18n.t;
+const base = api.core.utils.base;
+const G3WObject = api.core.G3WObject;
+const GUI = api.gui.GUI;
 
 // calsse servizio della viewport
 const ViewportService = function() {

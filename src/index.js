@@ -1,12 +1,12 @@
-const i18ninit = require('api').core.i18n.init;
-const ApplicationService = require('api').core.ApplicationService;
+import api from './api';
+// set the global enviromental variable g3wsdk. It used by plugins to load sdk class and instances
+window.g3wsdk = api;
+const i18ninit = api.core.i18n.init;
+const ApplicationService = api.core.ApplicationService;
 // ApplicationTemplate instance. It manages the application template
 const ApplicationTemplate = require('gui/template');
 // Main applcation config file
-const config = require('../config/app/config');
-// set the global enviromental variable g3wsdk. It used by plugins to load sdk class and instances
-window.g3wsdk = require('api');
-
+const config = require('app/config');
 // main function to create the start application configuration
 function createApplicationConfig() {
   return {
@@ -130,6 +130,6 @@ const bootstrap = function() {
   })
 };
 
-// run  bootstrap function
+// run  bootstrap function at beginning
 bootstrap();
 
